@@ -7,19 +7,67 @@ class Comandos:
     @staticmethod
     def init():
 
+        mensajes = list()
+
+        mensajes.append("De nada!")
+        mensajes.append("OKAAA")
+        mensajes.append("No hay de que!")
+        mensajes.append("De nada, vuelve cuando quieras!")
+
         Comandos.add(
             Comando(
-                "hora",
-                "Dice la hora del servidor",
-                time.strftime("%H:%M:%S")
+                "gracias",
+                mensajes
+            )
+        )
+
+        mensajes = list()
+
+        mensajes.append("Hola")
+        mensajes.append("Wena wena")
+        mensajes.append("Hola viej@! qué tal")
+        mensajes.append("Wena viej@!")
+
+        Comandos.add(
+            Comando(
+                "hola",
+                mensajes
             )
         )
 
         Comandos.add(
             Comando(
-                "gracias",
-                "Da las gracias!",
-                "De nada!"
+                "ola",
+                mensajes
+            )
+        )
+
+        mensajes = list()
+
+        mensajes.append("bien, acá y tú? qué necesitas?")
+        mensajes.append("bien bien y tú? en qué te puedo ayudar?")
+        mensajes.append("Acá programando y tú? cuéntame que necesitas")
+
+        Comandos.add(
+            Comando(
+                "como esta",
+                mensajes
+            )
+        )
+        Comandos.add(
+            Comando(
+                "cómo está",
+                mensajes
+            )
+        )
+
+        mensajes = list()
+        mensajes.append("m?")
+
+        Comandos.add(
+            Comando(
+                "profe",
+                mensajes
             )
         )
 

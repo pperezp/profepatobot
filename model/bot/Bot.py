@@ -12,7 +12,6 @@ class Bot:
     @staticmethod
     def init():
         Bot.data = Data()
-        Bot.save = False
         Comandos.init()
         Bot.bot = telegram.Bot(token="406813267:AAEvEQwnHNvwYXNuI0C2v9Ub9n6s7iRx_qA")
         Bot.bot_updater = Updater(Bot.bot.token)
@@ -32,9 +31,20 @@ class Bot:
     @staticmethod
     def start(bot, update, pass_chat_data=True):
         Bot.id = update.message.chat_id
-        Bot.enviarMensaje(Comandos.print())
 
+        alumno = Bot.data.get_alumno(Bot.id)
 
+        if alumno is None:
+            info = bot.getChat(update.message.chat_id)
+
+            if (info['last_name'] is None):
+                alumno = Alumno(info['id'], info['first_name'])
+            else:
+                alumno = Alumno(info['id'], info['first_name'] + " " + info['last_name'])
+
+            Bot.data.crear_alumno(alumno)
+
+        Bot.enviarMensaje("Hola " + alumno.nombre + ". En que te puedo ayudar?")
 
     @staticmethod
     def listener(bot, update):
@@ -45,46 +55,24 @@ class Bot:
 
             alumno = Bot.data.get_alumno(Bot.id)
 
-            if alumno is None:
-                Bot.enviarMensaje("No te conozco. Pero te estoy conociendo.")
+            c = Comandos.get(mensaje)
 
-                info = bot.getChat(update.message.chat_id)
-                print(info['id'])
-                print(info['first_name'])
-                print(info['last_name'])
+            if c is not None:
+                Bot.enviarMensaje(c.get_mensaje_random())
 
-                if(info['last_name'] is None):
-                    alumno = Alumno(info['id'], info['first_name'])
-                else:
-                    alumno = Alumno(info['id'], info['first_name'] + " " + info['last_name'])
-
-                Bot.data.crear_alumno(alumno)
-
-                Bot.enviarMensaje("Hola "+alumno.nombre+". En que te puedo ayudar?")
-            else:
-                Bot.enviarMensaje("Ya te conozco "+alumno.nombre)
-                """
-                c = Comandos.get(mensaje)
-
-                if c is None:
-                    Bot.enviarMensaje("No te entiendo viejo")
-                elif c.accion is None:
-                    Bot.enviarMensaje(c.mensaje)
-                else:
-                    c.accion()
-                """
-            mensaje = Mensaje(alumno.id, mensaje)
-            Bot.data.reg_mensaje(mensaje)
+            men = Mensaje(alumno.id, mensaje)
+            Bot.data.reg_mensaje(men)
         except BaseException as b:
             print(str(b))
 
     @staticmethod
     def enviarMensaje(mensaje):
+        #"[" + time.strftime("%H:%M:%S") + "] " +
         Bot.bot.send_chat_action(
             chat_id=Bot.id,
             action=telegram.ChatAction.TYPING
         )
         Bot.bot.sendMessage(
             chat_id=Bot.id,
-            text="[" + time.strftime("%H:%M:%S") + "] " + mensaje
+            text=mensaje
         )
