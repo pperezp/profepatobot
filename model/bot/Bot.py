@@ -4,12 +4,14 @@ import telegram
 from telegram.ext import *
 
 from model.bot.Comandos import Comandos
-from model.bd.Data import Data
-from model.bd.Alumno import Alumno
+from model.bd.Data      import Data
+from model.bd.Alumno    import Alumno
+from model.bd.Mensaje   import Mensaje
 
 class Bot:
     @staticmethod
     def init():
+        Bot.data = Data()
         Bot.save = False
         Comandos.init()
         Bot.bot = telegram.Bot(token="406813267:AAEvEQwnHNvwYXNuI0C2v9Ub9n6s7iRx_qA")
@@ -41,9 +43,7 @@ class Bot:
             Bot.id = update.message.chat_id
             print("ID: " + str(Bot.id) + " Mensaje:" + mensaje)
 
-            data = Data()
-
-            alumno = data.get_alumno(Bot.id)
+            alumno = Bot.data.get_alumno(Bot.id)
 
             if alumno is None:
                 Bot.enviarMensaje("No te conozco. Pero te estoy conociendo.")
@@ -53,8 +53,12 @@ class Bot:
                 print(info['first_name'])
                 print(info['last_name'])
 
-                alumno = Alumno(info['id'], info['first_name']+" "+info['last_name'])
-                data.crear_alumno(alumno)
+                if(info['last_name'] is None):
+                    alumno = Alumno(info['id'], info['first_name'])
+                else:
+                    alumno = Alumno(info['id'], info['first_name'] + " " + info['last_name'])
+
+                Bot.data.crear_alumno(alumno)
 
                 Bot.enviarMensaje("Hola "+alumno.nombre+". En que te puedo ayudar?")
             else:
@@ -69,6 +73,8 @@ class Bot:
                 else:
                     c.accion()
                 """
+            mensaje = Mensaje(alumno.id, mensaje)
+            Bot.data.reg_mensaje(mensaje)
         except BaseException as b:
             print(str(b))
 

@@ -3,15 +3,24 @@ CREATE DATABASE profe_pato_bot;
 USE profe_pato_bot;
 
 CREATE TABLE alumno(
-  id INT,
-  nombre VARCHAR(200),
-  fecha DATETIME,
+  id      INT,
+  nombre  VARCHAR(200),
+  fecha   DATETIME,
   PRIMARY KEY (id)
 );
 
+CREATE TABLE mensaje (
+  id      INT AUTO_INCREMENT,
+  alumno  INT,
+  mensaje VARCHAR(2000),
+  fecha   DATETIME,
+  PRIMARY KEY (id),
+  FOREIGN KEY (alumno) REFERENCES alumno(id)
+);
+
 CREATE TABLE tag (
-  id INT AUTO_INCREMENT,
-  nombre VARCHAR(200),
+  id      INT AUTO_INCREMENT,
+  valor   VARCHAR(200),
   PRIMARY KEY (id)
 );
 
@@ -30,8 +39,8 @@ INSERT INTO tag VALUES(NULL, 'ajax');
 INSERT INTO tag VALUES(NULL, 'crud');
 
 CREATE TABLE link (
-  id INT AUTO_INCREMENT,
-  valor VARCHAR(2000),
+  id      INT AUTO_INCREMENT,
+  valor   VARCHAR(2000),
   PRIMARY KEY(id)
 );
 
@@ -41,12 +50,12 @@ INSERT INTO link VALUES (null, 'https://www.youtube.com/watch?v=LG_ncb4VzSQ'); /
 INSERT INTO link VALUES (null, 'https://www.youtube.com/watch?v=qO510Nnp4JU'); /*c#, mssql, crud*/
 
 CREATE TABLE link_tag (
-  id INT AUTO_INCREMENT,
-  link INT,
-  tag INT,
+  id      INT AUTO_INCREMENT,
+  link    INT,
+  tag     INT,
   PRIMARY KEY(id),
   FOREIGN KEY(link) REFERENCES link(id),
-  FOREIGN KEY(tag) REFERENCES tag(id)
+  FOREIGN KEY(tag)  REFERENCES tag(id)
 );
 
 INSERT INTO link_tag VALUES (NULL, '1','6');
@@ -64,7 +73,7 @@ SELECT
   l.id AS 'ID link',
   l.valor AS 'Link',
   t.id AS 'ID tag',
-  t.nombre AS 'Tag'
+  t.valor AS 'Tag'
 FROM
   link_tag lt
   INNER JOIN link l ON l.id = lt.link
@@ -76,19 +85,28 @@ SELECT
   l.id AS 'ID link',
   l.valor AS 'Link',
   t.id AS 'ID tag',
-  t.nombre AS 'Tag'
+  t.valor AS 'Tag'
 FROM
   link_tag lt
   INNER JOIN link l ON l.id = lt.link
   INNER JOIN tag t ON t.id = lt.tag
 WHERE
-  t.nombre LIKE '%mssql%' OR
-  t.nombre LIKE '%java web%'
+  t.valor LIKE '%mssql%' OR
+  t.valor LIKE '%java web%'
   GROUP BY l.id;
 
-
+/*Listado de todos los mensaje*/
+SELECT
+  m.id,
+  a.nombre AS 'Alumno',
+  m.mensaje,
+  m.fecha
+FROM
+  alumno a
+  INNER JOIN mensaje m ON a.id = m.alumno;
 
 SELECT * FROM tag;
+SELECT * FROM mensaje;
 SELECT * FROM link;
 SELECT * FROM link_tag;
 SELECT * FROM alumno;
