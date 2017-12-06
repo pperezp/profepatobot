@@ -55,13 +55,29 @@ class Bot:
 
             alumno = Bot.data.get_alumno(Bot.id)
 
-            c = Comandos.get(mensaje)
+            links = Bot.data.get_links(mensaje)
 
-            if c is not None:
-                Bot.enviarMensaje(c.get_mensaje_random())
+            if len(links) != 0:
+                for l in links:
+                    Bot.enviarMensaje(l)
+            else:
+                # no se encontraron links
 
-            men = Mensaje(alumno.id, mensaje)
-            Bot.data.reg_mensaje(men)
+                c = Comandos.get(mensaje)
+
+                if c is not None:
+                    Bot.enviarMensaje(c.get_mensaje_random())
+                else:
+                    Bot.enviarMensaje("Soory, no encontré material. Intenta con estas búsquedas:")
+
+                    string = ""
+                    for t in Bot.data.get_tags():
+                        string += t+"\n"
+
+                    Bot.enviarMensaje(string)
+
+                men = Mensaje(alumno.id, mensaje)
+                Bot.data.reg_mensaje(men)
         except BaseException as b:
             print(str(b))
 

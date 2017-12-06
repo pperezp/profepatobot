@@ -71,6 +71,18 @@ class Comandos:
             )
         )
 
+        mensajes = list()
+        mensajes.append("oka!")
+        mensajes.append("okaaaaa!")
+        mensajes.append("OKAAAAAAA!")
+
+        Comandos.add(
+            Comando(
+                "oka",
+                mensajes
+            )
+        )
+
     @staticmethod
     def add(comando):
         try:

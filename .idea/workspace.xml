@@ -4,8 +4,8 @@
     <list default="true" id="1d7611f5-1ba9-4003-b096-7952d70f261a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/bd/Data.py" afterPath="$PROJECT_DIR$/model/bd/Data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/bd/script.sql" afterPath="$PROJECT_DIR$/model/bd/script.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/bot/Bot.py" afterPath="$PROJECT_DIR$/model/bot/Bot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/bot/Comando.py" afterPath="$PROJECT_DIR$/model/bot/Comando.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/bot/Comandos.py" afterPath="$PROJECT_DIR$/model/bot/Comandos.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/profepatobot$Comando.coverage" NAME="Comando Coverage Results" MODIFIED="1512528736291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/bot" />
-    <SUITE FILE_PATH="coverage/profepatobot$main.coverage" NAME="main Coverage Results" MODIFIED="1512530517545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/profepatobot$main.coverage" NAME="main Coverage Results" MODIFIED="1512532576399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -31,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="script.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/bd/script.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="103" column="4" lean-forward="true" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -51,11 +51,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/bd/Data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1512532572523" expanded="true" signature="444:475" ph="SELECT * FRO... alumno" />
+                <marker date="1512532572523" expanded="true" signature="444:476" ph="SELECT * FRO... alumno" />
+                <marker date="1512532572523" expanded="true" signature="726:805" ph="INSERT INTO alumno... " />
+                <marker date="1512532572523" expanded="true" signature="970:1004" ph="INSERT INTO mensaje... " />
+                <marker date="1512532572523" expanded="true" signature="970:1034" ph="INSERT INTO mensaje... " />
+                <marker date="1512532572523" expanded="true" signature="970:1064" ph="INSERT INTO mensaje... " />
+                <marker date="1512532572523" expanded="true" signature="970:1067" ph="INSERT INTO mensaje... " />
+                <marker date="1512532572523" expanded="true" signature="1205:1336" ph="SELECT l.id link_tag" />
+                <marker date="1512532572523" expanded="true" signature="1205:1370" ph="SELECT l.id link_tag" />
+                <marker date="1512532572523" expanded="true" signature="1205:1415" ph="SELECT l.id link_tag" />
+                <marker date="1512532572523" expanded="true" signature="1669:1686" ph="SELECT * FRO... tag" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/bot/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+            <state relative-caret-position="298">
+              <caret line="73" column="43" lean-forward="false" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -66,38 +89,9 @@
       <file leaf-file-name="Comandos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/bot/Comandos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="-206">
+              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comando.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/bot/Comando.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/bd/Data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1512530695466" expanded="true" signature="444:475" ph="SELECT * FRO... alumno" />
-                <marker date="1512530695466" expanded="true" signature="444:476" ph="SELECT * FRO... alumno" />
-                <marker date="1512530695466" expanded="true" signature="726:805" ph="INSERT INTO alumno... " />
-                <marker date="1512530695466" expanded="true" signature="970:1004" ph="INSERT INTO mensaje... " />
-                <marker date="1512530695466" expanded="true" signature="970:1034" ph="INSERT INTO mensaje... " />
-                <marker date="1512530695466" expanded="true" signature="970:1064" ph="INSERT INTO mensaje... " />
-                <marker date="1512530695466" expanded="true" signature="970:1067" ph="INSERT INTO mensaje... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,11 +118,11 @@
         <option value="$PROJECT_DIR$/model/bd/Alumno.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/model/bd/Mensaje.py" />
-        <option value="$PROJECT_DIR$/model/bd/script.sql" />
         <option value="$PROJECT_DIR$/model/bot/Comando.py" />
-        <option value="$PROJECT_DIR$/model/bot/Bot.py" />
         <option value="$PROJECT_DIR$/model/bot/Comandos.py" />
+        <option value="$PROJECT_DIR$/model/bot/Bot.py" />
         <option value="$PROJECT_DIR$/model/bd/Data.py" />
+        <option value="$PROJECT_DIR$/model/bd/script.sql" />
       </list>
     </option>
   </component>
@@ -459,8 +453,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6134228" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25225225" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.252349" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25225225" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -485,7 +479,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6134228" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31006712" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25225225" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -545,11 +539,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/bd/script.sql">
+    <entry file="file://$PROJECT_DIR$/model/bot/Comando.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="103" column="4" lean-forward="true" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+        <state relative-caret-position="168">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/bot/Comandos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/bot/Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="73" column="43" lean-forward="false" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -561,46 +573,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/bot/Comandos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/bd/Data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="524">
+          <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1512530695466" expanded="true" signature="444:475" ph="SELECT * FRO... alumno" />
-            <marker date="1512530695466" expanded="true" signature="444:476" ph="SELECT * FRO... alumno" />
-            <marker date="1512530695466" expanded="true" signature="726:805" ph="INSERT INTO alumno... " />
-            <marker date="1512530695466" expanded="true" signature="970:1004" ph="INSERT INTO mensaje... " />
-            <marker date="1512530695466" expanded="true" signature="970:1034" ph="INSERT INTO mensaje... " />
-            <marker date="1512530695466" expanded="true" signature="970:1064" ph="INSERT INTO mensaje... " />
-            <marker date="1512530695466" expanded="true" signature="970:1067" ph="INSERT INTO mensaje... " />
+            <marker date="1512532572523" expanded="true" signature="444:475" ph="SELECT * FRO... alumno" />
+            <marker date="1512532572523" expanded="true" signature="444:476" ph="SELECT * FRO... alumno" />
+            <marker date="1512532572523" expanded="true" signature="726:805" ph="INSERT INTO alumno... " />
+            <marker date="1512532572523" expanded="true" signature="970:1004" ph="INSERT INTO mensaje... " />
+            <marker date="1512532572523" expanded="true" signature="970:1034" ph="INSERT INTO mensaje... " />
+            <marker date="1512532572523" expanded="true" signature="970:1064" ph="INSERT INTO mensaje... " />
+            <marker date="1512532572523" expanded="true" signature="970:1067" ph="INSERT INTO mensaje... " />
+            <marker date="1512532572523" expanded="true" signature="1205:1336" ph="SELECT l.id link_tag" />
+            <marker date="1512532572523" expanded="true" signature="1205:1370" ph="SELECT l.id link_tag" />
+            <marker date="1512532572523" expanded="true" signature="1205:1415" ph="SELECT l.id link_tag" />
+            <marker date="1512532572523" expanded="true" signature="1669:1686" ph="SELECT * FRO... tag" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/bot/Comando.py">
+    <entry file="file://$PROJECT_DIR$/model/bd/script.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/bot/Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

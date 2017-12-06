@@ -64,6 +64,7 @@ INSERT INTO link_tag VALUES (NULL, '2','10');
 INSERT INTO link_tag VALUES (NULL, '2','8');
 INSERT INTO link_tag VALUES (NULL, '3','5');
 INSERT INTO link_tag VALUES (NULL, '3','11');
+INSERT INTO link_tag VALUES (NULL, '3','12');
 INSERT INTO link_tag VALUES (NULL, '4','8');
 INSERT INTO link_tag VALUES (NULL, '4','10');
 INSERT INTO link_tag VALUES (NULL, '4','13');

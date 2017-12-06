@@ -46,3 +46,34 @@ class Data:
         self.cur.execute(insert)
 
         self.desconectar()
+
+    def get_links(self, tag):
+        self.conectar()
+
+        select = "SELECT l.id AS 'ID link', l.valor AS 'Link',t.id AS 'ID tag', t.valor AS 'Tag' FROM link_tag lt INNER JOIN link l ON l.id = lt.link INNER JOIN tag t ON t.id = lt.tag WHERE t.valor LIKE '%"+tag+"%' GROUP BY l.id;"
+
+        self.cur.execute(select)
+
+        links = list()
+
+        for row in self.cur.fetchall():
+            links.append(row[1])
+
+        self.desconectar()
+
+        return links
+
+
+    def get_tags(self):
+        self.conectar()
+
+        select = "SELECT * FROM tag"
+        self.cur.execute(select)
+
+        tags = list()
+        for row in self.cur.fetchall():
+            tags.append(row[1])
+
+        self.desconectar()
+
+        return tags
