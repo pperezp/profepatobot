@@ -1,5 +1,6 @@
 import MySQLdb
 from model.bd.Alumno import Alumno
+from model.bd.Tag import Tag
 
 class Data:
 
@@ -39,6 +40,41 @@ class Data:
 
         self.desconectar()
 
+    # tags - Lista de objetos Tag
+    def crear_link(self, link, tags):
+        self.conectar()
+
+        insert = "INSERT INTO link VALUES(null,'"+link+"')"
+        print(insert)
+        self.cur.execute(insert)
+
+        self.desconectar()
+
+        id_link = self.get_last_id_link()
+
+        self.conectar()
+
+        for t in tags:
+            insert = "INSERT INTO link_tag VALUES(NULL, '"+str(id_link)+"','"+str(t.id)+"')"
+            self.cur.execute(insert)
+            print(insert)
+
+        self.desconectar()
+
+    def get_last_id_link(self):
+        self.conectar()
+
+        select = "SELECT MAX(id) FROM link"
+
+        self.cur.execute(select)
+
+        id_link = -1
+        for row in self.cur.fetchall():
+            id_link = row[0]
+
+        self.desconectar()
+        return id_link
+
     def reg_mensaje(self, mensaje):
         self.conectar()
 
@@ -72,7 +108,8 @@ class Data:
 
         tags = list()
         for row in self.cur.fetchall():
-            tags.append(row[1])
+            t = Tag(row[0], row[1])
+            tags.append(t)
 
         self.desconectar()
 
