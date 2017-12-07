@@ -72,7 +72,7 @@ class Bot:
 
                     string = ""
                     for t in Bot.data.get_tags():
-                        string += t+"\n"
+                        string += t.valor+"\n"
 
                     Bot.enviarMensaje(string)
 

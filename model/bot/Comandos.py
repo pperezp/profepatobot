@@ -9,10 +9,10 @@ class Comandos:
 
         mensajes = list()
 
-        mensajes.append("De nada!")
-        mensajes.append("OKAAA")
-        mensajes.append("No hay de que!")
-        mensajes.append("De nada, vuelve cuando quieras!")
+        mensajes.append("De nada! 👍")
+        mensajes.append("OKAAA 👍")
+        mensajes.append("No hay de que! 👍")
+        mensajes.append("De nada, vuelve cuando quieras! 👍")
 
         Comandos.add(
             Comando(
